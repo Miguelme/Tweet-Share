@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             self.tweetTextView.resignFirstResponder()
         }
         
-        let alertCtrl = UIAlertController(title: "Tweet Share", message: "Tweet Your Note!", preferredStyle: UIAlertControllerStyle.Alert)
+        let alertCtrl = UIAlertController(title: "Social Share", message: "", preferredStyle: UIAlertControllerStyle.Alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: .Default, handler: nil)
         let tweetAction = UIAlertAction(title: "Tweet", style: .Default, handler:{
         _ in
@@ -52,8 +52,24 @@ class ViewController: UIViewController {
             
         })
         
+        let facebookAction = UIAlertAction(title: "Post to Facebook!", style: .Default, handler: {
+            _ in
+            
+            let facebookVC = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            // If user has signed on Facebook
+            if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
+                facebookVC.setInitialText(self.tweetTextView.text)
+                
+                self.presentViewController(facebookVC, animated: true, completion: nil)
+            }else{
+                self.showAlertMessage("Please Sign In to Facebook")
+            }
+            
+        })
+        
         alertCtrl.addAction(cancelAction)
         alertCtrl.addAction(tweetAction)
+        alertCtrl.addAction(facebookAction)
         
         self.presentViewController(alertCtrl, animated: true, completion: nil)
     }
