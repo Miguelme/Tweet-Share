@@ -15,6 +15,7 @@
 		49FB51D51BE443B1006FFBB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49FB51D31BE443B1006FFBB1 /* LaunchScreen.storyboard */; };
 		49FB51E01BE443B1006FFBB1 /* TwitterShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FB51DF1BE443B1006FFBB1 /* TwitterShareTests.swift */; };
 		49FB51EB1BE443B1006FFBB1 /* TwitterShareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FB51EA1BE443B1006FFBB1 /* TwitterShareUITests.swift */; };
+		49FB51F91BE4475C006FFBB1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FB51F81BE4475C006FFBB1 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		49FB51E61BE443B1006FFBB1 /* TwitterShareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterShareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49FB51EA1BE443B1006FFBB1 /* TwitterShareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterShareUITests.swift; sourceTree = "<group>"; };
 		49FB51EC1BE443B1006FFBB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49FB51F81BE4475C006FFBB1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49FB51F91BE4475C006FFBB1 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +82,7 @@
 		49FB51BB1BE443B1006FFBB1 = {
 			isa = PBXGroup;
 			children = (
+				49FB51F81BE4475C006FFBB1 /* Social.framework */,
 				49FB51C61BE443B1006FFBB1 /* TwitterShare */,
 				49FB51DE1BE443B1006FFBB1 /* TwitterShareTests */,
 				49FB51E91BE443B1006FFBB1 /* TwitterShareUITests */,
