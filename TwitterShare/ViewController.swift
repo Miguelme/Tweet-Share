@@ -67,10 +67,19 @@ class ViewController: UIViewController {
             
         })
         
+        let moreAction = UIAlertAction(title: "More", style: .Default, handler: {
+            _ in
+            
+            let activityCtrl = UIActivityViewController(activityItems: [self.tweetTextView.text], applicationActivities: nil)
+            self.presentViewController(activityCtrl, animated: true, completion: nil)
+            
+        })
+        
+
         alertCtrl.addAction(cancelAction)
         alertCtrl.addAction(tweetAction)
         alertCtrl.addAction(facebookAction)
-        
+        alertCtrl.addAction(moreAction)
         self.presentViewController(alertCtrl, animated: true, completion: nil)
     }
     
